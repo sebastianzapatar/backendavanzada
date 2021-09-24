@@ -41,7 +41,7 @@ public class PersonaRestController {
 		return personaservice.encontrarporId(id);
 	}
 	@PutMapping("/personas/{id}")
-	@ResponseStatus(HttpStatus.CREATED)
+	@ResponseStatus(HttpStatus.ACCEPTED)
 	public Persona editar(@PathVariable Long id,@RequestBody Persona e) {
 		Persona actual=personaservice.encontrarporId(id);
 		actual.setNombre(e.getNombre());
