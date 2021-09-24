@@ -33,5 +33,12 @@ public class PersonaService implements IPersonaService {
 		
 	}
 
+	@Override
+	public Persona encontrarporId(Long id) {
+		// TODO Auto-generated method stub
+		return personadao.findById(id).orElse(null);
+	}
+	
+
 	
 }
