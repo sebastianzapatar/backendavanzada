@@ -19,5 +19,19 @@ public class PersonaService implements IPersonaService {
 		return personadao.findAll();//orm
 		
 	}
+
+	@Override
+	public Persona save(Persona e) {
+		// TODO Auto-generated method stub
+		return personadao.save(e);
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		personadao.deleteById(id);
+		
+	}
+
 	
 }
