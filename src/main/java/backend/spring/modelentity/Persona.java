@@ -31,19 +31,24 @@ public class Persona implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	
-	@ManyToOne(fetch=FetchType.LAZY)//Restapi con Json
-	@JoinColumn(name="jefe_id")
-	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
-	@NotNull
-	private Jefe jefe;
-	
 	@NotNull
 	@Size(min=2,max=16)
 	@Column
 	private String nombre;
 	
 	private String apellido;
+	
+	private String foto;
+	
+	public String getFoto() {
+		return foto;
+	}
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -63,12 +68,6 @@ public class Persona implements Serializable{
 		this.apellido = apellido;
 	}
 	
-	public Jefe getJefe() {
-		return jefe;
-	}
-
-	public void setJefe(Jefe jefe) {
-		this.jefe = jefe;
-	}
+	
 	
 }
