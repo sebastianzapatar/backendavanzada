@@ -61,7 +61,10 @@ public class PersonaService implements IPersonaService {
 		// TODO Auto-generated method stub
 		return jefedao.save(e);
 	}
-	
+	@Override
+	public List<Jefe> encontrarTodos(){
+		return jefedao.findAll();
+	}
 
 	
 }

@@ -13,4 +13,5 @@ public interface IPersonaService {
 	public List<Jefe> findAllJefes();
 	public List<Jefe> encontarJefes();
 	public Jefe savej(Jefe e);
+	public List<Jefe> encontrarTodos();
 }
